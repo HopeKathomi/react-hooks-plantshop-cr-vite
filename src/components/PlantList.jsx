@@ -1,9 +1,18 @@
-import React from "react";
+// import { UserContext } from "./App";
+import { useContext } from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList() {
+function PlantList({plants}) {
+  // const {plants} = useContext(UserContext);
+  // console.log("Plants: ", plants)
   return (
-    <ul className="cards">{/* render PlantCards components in here */}</ul>
+    <ul className="cards">{
+      plants.map(plant=>
+      <PlantCard plant={plant}/>
+      )
+      
+    }
+    </ul>
   );
 }
 
