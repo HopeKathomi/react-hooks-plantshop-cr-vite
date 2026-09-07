@@ -1,6 +1,8 @@
 import PlantCard from "./PlantCard";
 
 function PlantList({plants, searchWord}) {
+  // console.log("SEARCH WORD:", searchWord);
+  // console.log("PLANTS:", plants);
 
   return (
     <ul className="cards">{
